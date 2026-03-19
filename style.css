@@ -46,7 +46,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    padding-top: 60px; /* Simulated status bar space */
     border-bottom: 1px solid #F0F0F0;
     z-index: 20;
 }
