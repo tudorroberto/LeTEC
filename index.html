@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Ticket</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+    <div class="mobile-wrapper">
+        <header class="header">
+            <div class="header-left">
+                <svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                <h1>Active ticket</h1>
+            </div>
+            <div class="header-right chat-icon">
+                <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 8C7 6.895 7.895 6 9 6H17C18.105 6 19 6.895 19 8V14C19 15.105 18.105 16 17 16H10L6 19V9C6 8.448 6.448 8 7 8Z" fill="#000000"/>
+                    <path d="M13 12C13 10.895 13.895 10 15 10H23C24.105 10 25 10.895 25 12V18C25 19.105 24.105 20 23 20H16L12 23V13C12 12.448 12.448 12 13 12Z" fill="#000000"/>
+                    <!-- Right question mark matches the bg color -->
+                    <text x="18.5" y="17.5" fill="#FFC000" font-family="Inter, sans-serif" font-size="10" font-weight="900" text-anchor="middle">?</text>
+                </svg>
+            </div>
+        </header>
+        
+        <div class="carousel-container" id="carousel">
+            <!-- PAGE 1 (New layout) -->
+            <div class="page" id="page-1">
+                <div class="top-card card split-card">
+                    <div class="split-text">Are you changing<br>transport services?</div>
+                    <button class="activate-btn">Activate</button>
+                </div>
+                <div class="middle-section">
+                    <div class="illustration-bg-page1"></div>
+                </div>
+                
+                <div class="bottom-card card">
+                    <h2 class="journey">1 journey AIRPORT BSCA</h2>
+                    <div class="traveller">1 traveller</div>
+                    <div class="validation-text">This ticket is valid until</div>
+                    <div class="timer" id="valid-until-timer">16:02:13</div>
+                </div>
+            </div>
+
+            <!-- PAGE 2 (Old layout, QR Code) -->
+            <div class="page" id="page-2">
+                <div class="top-card card">
+                    <div class="time-display" id="time-display">14:32:55</div>
+                    <div class="boarding-area">Boarding area: 07102</div>
+                </div>
+                
+                <div class="middle-section">
+                    <div class="illustration-bg"></div>
+                    <div class="qr-wrapper">
+                        <div class="qr-frame">
+                            <img class="qr-code-img" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=TicketData12345" alt="QR Code">
+                            <div class="qr-text">Show this QR code to the<br>inspector</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-card card">
+                    <h2 class="journey">1 journey AIRPORT BSCA</h2>
+                    <div class="traveller">1 traveller</div>
+                    <div class="validation-text">This ticket has been validated since</div>
+                    <div class="timer" id="timer">00:00:01</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="indicators">
+            <span class="dot grey" id="dot1"></span>
+            <span class="dot yellow" id="dot2"></span>
+        </div>
+    </div>
+    
+    <script src="script.js?v=8"></script>
+</body>
+</html>
